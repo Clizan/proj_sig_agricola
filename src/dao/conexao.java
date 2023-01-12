@@ -8,24 +8,23 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
 /**
  *
  * @author clizanwillian
  */
 public class conexao {
     
-    public static conexao getConexao() {
+    public static Connection getConexao() {
 
         String user = "root";
         String pass = "";
         String db = "loja";
 
-        conexao conn = null;
+        Connection conn = null;
 
         try {
 
-            conn = (conexao) DriverManager.getConnection("jdbc:mysql://localhost:3306/loja", "root", "");
+            conn = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/agricola", "root", "");
 
         } catch (Exception e) {
 
